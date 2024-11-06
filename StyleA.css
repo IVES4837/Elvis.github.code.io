@@ -1,0 +1,94 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300);
+
+body {
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  background: #222;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+}
+
+.svg-container {
+  height: 124px;
+  width: 124px;
+  position: relative;
+
+  h1 {
+    color: #aaa;
+    font-family: "Source Sans Pro";
+    font-size: 1.2rem;
+    left: 50%;
+    letter-spacing: 4px;
+    position: absolute;
+    text-align: center;
+    top: -60px;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+}
+
+.square {
+  height: 124px;
+  width: 124px;
+  
+  .background {
+    fill: transparent;
+    stroke: #1abc9c;
+    transition: all 200ms ease;
+  }
+  
+  .foreground {
+    fill: transparent;
+    stroke-dasharray: 480;
+    stroke-dashoffset: 480;
+    transition: all 800ms ease;
+  }
+  
+  .line {
+    stroke-width: 2;
+    stroke: #1abc9c;
+    transform-origin: 50% 50%;
+    transition: all 500ms ease;
+  }
+  
+}
+  
+.square:hover {
+    cursor: pointer;
+    
+    .background {
+      stroke: transparent;
+    }
+    
+    .foreground {
+      stroke-dashoffset: 0;
+      stroke: #EE3769;
+    }
+    
+    .line {
+      stroke: #EE3769;
+      transform: rotate(45deg);
+    }
+    
+}
+
+.square:not(:hover){
+    .background{
+        stroke: #1abc9c;
+    }
+
+    .foreground{
+        stroke-dashoffset: 480;
+        stroke: transparent;
+    }
+
+    .line{
+        stroke: #1abc9c;
+        transform: 0;
+    }
+
+}

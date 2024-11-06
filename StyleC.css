@@ -1,0 +1,226 @@
+:root{
+  --red: #F73F52;
+  --orange: #FF9000;
+  --yellow: #FBD400;
+  --green: #9ED763;
+  --blue: #6730EC;
+  --purple: #815A8F;
+  --white: #FFFFFF;
+  --rebeccapurple: #663399;
+}
+
+.swatch div{
+  color: #FFFFFF;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  writing-mode: vertical-rl;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+
+body {
+  background: var(--rebeccapurple);
+}
+
+.swatch {
+  display: block;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 100px;
+  
+  div {
+    width: 70px;
+    height: 225px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    border-top: solid 2px rgba(0, 0, 0, .2);
+    border-left: solid 3px rgba(255, 255, 255, .2);
+    border-bottom: solid 3px rgba(0, 0, 0, .2);
+    text-align: center;
+    box-sizing: border-box;
+    transform-origin: center 10%;
+    display: flex;
+    backface-visibility: hidden;
+    margin-left: -35px;
+  }
+  
+  div:before {
+    width: 16px;
+    height: 16px;
+    content: "";
+    background-color: var(--white);
+    display: inline-block;
+    border-radius: 8px;
+    top: 10px;
+    position: absolute;
+    margin-left: 8px;
+  }
+  
+  div:nth-child(1) {
+    background-color: var(--purple);
+    animation: swatch-purple-motion 10s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+  }
+  div:nth-child(2) {
+    background-color: var(--blue);
+    animation: swatch-blue-motion 10s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+  }
+  div:nth-child(3) {
+    background-color: var(--green);
+    animation: swatch-green-motion 10s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+  }
+  div:nth-child(4) {
+    background-color: var(--yellow);
+    animation: swatch-yellow-motion 10s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+  }
+  div:nth-child(5) {
+    background-color: var(--orange);
+    animation: swatch-orange-motion 10s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+  }
+  div:nth-child(6) {
+    background-color: var(--red);
+    animation: swatch-red-motion 10s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+  }
+}
+
+@keyframes swatch-purple-motion {
+  0% {
+    transform: rotate(0deg);
+    left: calc(50%);
+  }
+  15%, 35% {
+    transform: rotate(-65deg);
+    left: calc(50%);
+  }
+  45%, 55% {
+    transform: rotate(0deg);
+    left: calc(50%);
+  }
+  65%, 80% {
+    transform: rotate(0deg);
+    left: calc(5%);
+  } 
+  80%, 95% {
+    transform: rotate(0deg);
+    left: calc(50%);
+  }
+}
+
+@keyframes swatch-blue-motion {
+  0% {
+    transform: rotate(0deg);
+    left: calc(50%);
+  }
+  15%, 35% {
+    transform: rotate(-40deg);
+    left: calc(50%);
+  }
+  45%, 55% {
+    transform: rotate(0deg);
+    left: calc(50%);
+  }
+  65%, 80% {
+    transform: rotate(0deg);
+    left: calc(23%);
+  } 
+  80%, 95% {
+    transform: rotate(0deg);
+    left: calc(50%);
+  }
+}
+
+@keyframes swatch-green-motion {
+  0% {
+    transform: rotate(0deg);
+    left: calc(50%);
+  }
+  15%, 35% {
+    transform: rotate(-15deg);
+    left: calc(50%);
+  }
+  45%, 55% {
+    transform: rotate(0deg);
+    left: calc(50%);
+  }
+  65%, 80% {
+    transform: rotate(0deg);
+    left: calc(41%);
+  } 
+  80%, 95% {
+    transform: rotate(0deg);
+    left: calc(50%);
+  }
+}
+
+@keyframes swatch-yellow-motion {
+  0% {
+    transform: rotate(0deg);
+    left: calc(50%);
+  }
+  15%, 35% {
+    transform: rotate(15deg);
+    left: calc(50%);
+  }
+  45%, 55% {
+    transform: rotate(0deg);
+    left: calc(50%);
+  }
+  65%, 80% {
+    transform: rotate(0deg);
+    left: calc(59%);
+  } 
+  80%, 95% {
+    transform: rotate(0deg);
+    left: calc(50%);
+  }
+}
+
+@keyframes swatch-orange-motion {
+  0% {
+    transform: rotate(0deg);
+    left: calc(50%);
+  }
+  15%, 35% {
+    transform: rotate(40deg);
+    left: calc(50%);
+  }
+  45%, 55% {
+    transform: rotate(0deg);
+    left: calc(50%);
+  }
+  65%, 80% {
+    transform: rotate(0deg);
+    left: calc(77%);
+  } 
+  80%, 95% {
+    transform: rotate(0deg);
+    left: calc(50%);
+  }
+}
+
+@keyframes swatch-red-motion {
+  0% {
+    transform: rotate(0deg);
+    left: calc(50%);
+  }
+  15%, 35% {
+    transform: rotate(65deg);
+    left: calc(50%);
+  }
+  45%, 55% {
+    transform: rotate(0deg);
+    left: calc(50%);
+  }
+  65%, 80% {
+    transform: rotate(0deg);
+    left: calc(95%);
+  } 
+  80%, 95% {
+    transform: rotate(0deg);
+    left: calc(50%);
+  }
+}
